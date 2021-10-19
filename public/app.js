@@ -15,7 +15,9 @@ var invOne = new Invoice("Mario", "Work on Plumbing", 236);
 var invTwo = new Invoice("Luigi", "Window Cleaning", 1);
 var invoices = [];
 invoices.push(invOne, invTwo);
-console.log(invoices);
+invoices.forEach(function (inv) {
+    console.log(inv.client, inv.details, inv.amount, inv.format());
+});
 var form = document.querySelector(".new-item-form");
 // inputs
 var type = document.querySelector("#type");
